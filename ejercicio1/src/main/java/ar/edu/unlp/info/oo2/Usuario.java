@@ -1,0 +1,37 @@
+package ar.edu.unlp.info.oo2;
+
+import java.util.ArrayList;
+
+public class Usuario {
+
+    private String screenName;
+    private ArrayList<Tweet> tweets;
+
+
+    public Usuario(String nombreUsuario) {
+        this.screenName = nombreUsuario;
+        this.tweets = new ArrayList<>();
+    }
+
+    public String getScreenName() {
+        return this.screenName;
+    }
+
+    public void agregarTweet(String mensaje) {
+        int min = 1;
+        int max = 280;
+
+        if (mensaje.length() >= min && mensaje.length() <= max) {
+            this.tweets.add(new TweetOriginal(mensaje));
+        }
+    }
+
+    public void retweetear(TweetOriginal tweet) {
+        this.tweets.add(new Retweet(tweet));
+    }
+
+    public void eliminarTweets() {
+        this.tweets.clear();
+    }
+
+}
