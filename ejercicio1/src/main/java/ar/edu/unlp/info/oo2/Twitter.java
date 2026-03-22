@@ -20,6 +20,7 @@ public class Twitter {
         Usuario aux = buscarUsuario(username);
         if (aux != null) {
             aux.eliminarTweets();
+            this.usuarios.forEach(user -> user.eliminarTweetsDeUsuario(aux));
             this.usuarios.remove(aux);
         }
     }

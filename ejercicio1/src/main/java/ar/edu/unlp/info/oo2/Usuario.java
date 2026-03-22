@@ -34,4 +34,8 @@ public class Usuario {
         this.tweets.clear();
     }
 
+    public void eliminarTweetsDelUsuario(Usuario user) {
+        this.tweets.stream().
+    }
+
 }
