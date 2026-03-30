@@ -1,11 +1,13 @@
 package ar.edu.unlp.info.oo2;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Usuario {
 
     private String screenName;
-    private ArrayList<Tweet> tweets;
+    private List<Tweet> tweets;
 
 
     public Usuario(String nombreUsuario) {
@@ -30,12 +32,19 @@ public class Usuario {
         this.tweets.add(new Retweet(tweet));
     }
 
+    public boolean contieneTweet(Tweet tw) {
+        return this.tweets.contains(tw);
+    }
+
     public void eliminarTweets() {
         this.tweets.clear();
     }
 
     public void eliminarTweetsDelUsuario(Usuario user) {
-        this.tweets.stream().
+        this.tweets = this.tweets.stream()
+                        .filter(tw -> !tw.getOrigen(user))
+                        .collect(Collectors.toList());
+        
     }
 
 }

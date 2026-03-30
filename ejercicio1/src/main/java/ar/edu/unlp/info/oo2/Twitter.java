@@ -1,10 +1,11 @@
 package ar.edu.unlp.info.oo2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Twitter {
 
-    private ArrayList<Usuario> usuarios;
+    private List<Usuario> usuarios;
 
     public Twitter() {
         this.usuarios = new ArrayList<>();
@@ -20,7 +21,7 @@ public class Twitter {
         Usuario aux = buscarUsuario(username);
         if (aux != null) {
             aux.eliminarTweets();
-            this.usuarios.forEach(user -> user.eliminarTweetsDeUsuario(aux));
+            this.usuarios.forEach(user -> user.eliminarTweetsDelUsuario(aux));
             this.usuarios.remove(aux);
         }
     }
