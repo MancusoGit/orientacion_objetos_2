@@ -10,7 +10,7 @@ public class Pasante extends Empleado {
 
     @Override
     protected double basico() {
-        return 20.000;
+        return 20000;
     }
 
     @Override

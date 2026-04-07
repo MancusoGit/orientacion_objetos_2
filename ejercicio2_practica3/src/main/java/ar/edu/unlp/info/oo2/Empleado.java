@@ -14,5 +14,4 @@ public abstract class Empleado {
         return (this.basico() * 0.13) + (this.adicional() * 0.05);
     }
 
-
 }

@@ -14,12 +14,12 @@ public class Temporario extends Empleado {
 
     @Override
     protected double basico() {
-        return 20.000 + (this.horas * 300);
+        return 20000 + (this.horas * 300);
     }
 
     @Override
     protected double adicional() {
-        double adHijos = this.hijos * 300;
+        double adHijos = this.hijos * 2000;
         return this.casado ? 5000 + adHijos : adHijos;
     }
 
