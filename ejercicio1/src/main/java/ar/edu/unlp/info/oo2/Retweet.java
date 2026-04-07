@@ -19,4 +19,5 @@ public class Retweet extends Tweet {
     public boolean getOrigen(Usuario user) {
         return this.origen.getOrigen(user);
     }
+    
 }

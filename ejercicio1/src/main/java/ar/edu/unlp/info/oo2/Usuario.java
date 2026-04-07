@@ -19,6 +19,10 @@ public class Usuario {
         return this.screenName;
     }
 
+    public List<Tweet> getTweets() {
+        return this.tweets;
+    }
+
     public void agregarTweet(String mensaje) {
         int min = 1;
         int max = 280;
@@ -34,6 +38,10 @@ public class Usuario {
 
     public boolean contieneTweet(Tweet tw) {
         return this.tweets.contains(tw);
+    }
+
+    public int getCantidadDeTweets() {
+        return this.tweets.size();
     }
 
     public void eliminarTweets() {
