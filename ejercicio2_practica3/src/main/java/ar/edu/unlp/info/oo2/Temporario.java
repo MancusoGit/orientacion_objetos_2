@@ -4,7 +4,7 @@ public class Temporario extends Empleado {
     
     private int horas;
     private int hijos;
-    private boolean casado;
+    private boolean casado; //true esta casado, false NO esta casado.
 
     public Temporario(int horas, int hijos, boolean casado) {
         this.horas = horas;
