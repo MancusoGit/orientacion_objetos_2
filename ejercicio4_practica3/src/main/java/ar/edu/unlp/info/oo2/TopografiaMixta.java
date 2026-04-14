@@ -2,7 +2,6 @@ package ar.edu.unlp.info.oo2;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class TopografiaMixta extends Topografia {
 
@@ -44,8 +43,7 @@ public class TopografiaMixta extends Topografia {
 
     @Override
     protected boolean esIgualAMixta(TopografiaMixta otraMixta) {
-        return IntStream.range(0, this.hijos.size())
-            .allMatch(i -> this.hijos.get(i).esIgualA(otraMixta.getHijos().get(i)));
+        return this.hijos.equals(otraMixta.getHijos());
     }
 
     @Override
